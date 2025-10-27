@@ -8,7 +8,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 def load_model():
     vectorizer=joblib.load("model/tfidf_vectorizer.pkl")
     tfidf_matrix=joblib.load("model/tfidf_matrix.pkl")
-    df = pd.read_csv("model/job_data_cleaned.csv")
+    df = pd.read_csv("model/job_data_subset.csv")
     return vectorizer, tfidf_matrix, df
 
 vectorizer, tfidf_matrix, df = load_model()
