@@ -33,34 +33,21 @@ Prosjektet demonstrerer hvordan tekstbasert maskinlæring kan brukes til å lage
 ---
 
 ## Mappestruktur
-Prosjektoversikt:
-
+```bash
 jobb_finner/
-
-app/
-
-app.py → Streamlit-app (hovedfilen som kjøres i skyen)
-
-model/
-
-train_job_model.py → Trener hele modellen
-
-train_job_model_subset.py → Lett versjon for skyen
-
-tfidf_vectorizer.pkl → Lagret TF-IDF-modell
-
-tfidf_matrix.pkl → Lagret TF-IDF-matrise
-
-job_data_subset.csv → Komprimert datasett brukt i webappen
-
-data/
-
-jobs.csv → Originalt (stort) datasett (ikke pushet til GitHub)
-
-requirements.txt → Pakkeliste for Streamlit
-
-README.md → Prosjektbeskrivelse
-
+├── app/
+│   └── app.py                 # Streamlit-app
+├── model/
+│   ├── train_job_model.py     # Full modelltrening
+│   ├── train_job_model_subset.py # Lett versjon for skyen
+│   ├── tfidf_vectorizer.pkl   # Lagret modell (tekstvektorisering)
+│   ├── tfidf_matrix.pkl       # TF-IDF-matrise for matching
+│   └── job_data_subset.csv    # Komprimert datasett
+├── data/
+│   └── jobs.csv               # Originalt datasett (ikke pushet)
+├── requirements.txt
+└── README.md
+```
 ---
 
 ## Kjør lokalt
